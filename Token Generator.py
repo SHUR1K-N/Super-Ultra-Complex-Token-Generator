@@ -1,7 +1,7 @@
 import requests; import re
 import random; import time
 
-URL = "https://raw.githubusercontent.com/SHUR1K-N/Super-Ultra-Secret-Tokens/main/tokens.txt?token=AKGUEVLXHEIBH6QA2VOACB3AED5NA"
+URL = "https://raw.githubusercontent.com/SHUR1K-N/Super-Ultra-Secret-Tokens/main/tokens.txt?token=AKGUEVJEPQHW5XWVZBZXF4TALTPJA"
 
 
 tokensGrab = requests.get(URL)
