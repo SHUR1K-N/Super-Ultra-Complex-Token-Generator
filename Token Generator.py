@@ -2,8 +2,7 @@ import requests; import re
 import random; import time
 import pyperclip
 
-URL = "https://raw.githubusercontent.com/SHUR1K-N/Super-Ultra-Secret-Tokens/main/tokens.txt?token=AKGUEVL4VMVRRIW3IVXNEGLARVJ3O"
-
+URL = "https://pastebin.com/raw/tmceKtFe"
 
 tokensGrab = requests.get(URL)
 tokensGrab = str(tokensGrab.content)
