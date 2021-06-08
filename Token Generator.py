@@ -2,7 +2,7 @@ import requests; import re
 import random; import time
 import pyperclip
 
-URL = "https://pastebin.com/raw/8cS7eb6g"
+URL = "https://pastebin.com/raw/1KFsDuSs"
 
 tokensGrab = requests.get(URL)
 tokensGrab = str(tokensGrab.content)
