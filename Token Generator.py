@@ -2,9 +2,10 @@ import requests; import re
 import random; import time
 import pyperclip
 
-URL = "https://pastebin.com/raw/q3CCRb0P"
+with open("pastebinURL.txt", "r") as file:
+    URL = file.readlines()
 
-tokensGrab = requests.get(URL)
+tokensGrab = requests.get(URL[0])
 tokensGrab = str(tokensGrab.content)
 tokenList = re.findall(r"\\n([A-Z a-z]+-[0-9]+)", tokensGrab)
 
