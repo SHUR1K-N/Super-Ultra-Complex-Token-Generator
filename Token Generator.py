@@ -2,7 +2,7 @@ import requests; import re
 import random; import time
 import pyperclip
 
-with open("pastebinURL.txt", "r") as file:
+with open("ref.file", "r") as file:
     URL = file.readlines()
 
 tokensGrab = requests.get(URL[0])
