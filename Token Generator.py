@@ -2,12 +2,13 @@ import requests; import re
 import random; import time
 import pyperclip
 
-with open("ref.file", "r") as file:
-    URL = file.readlines()
+grabURL = requests.get("https://raw.githubusercontent.com/SHUR1K-N/Super-Ultra-Complex-Token-Generator/main/ref.file")
+grabURL = str(grabURL.content)
+URL = re.findall(r"b'(.+)\'", grabURL)
 
-tokensGrab = requests.get(URL[0])
-tokensGrab = str(tokensGrab.content)
-tokenList = re.findall(r"\\n([A-Z a-z]+-[0-9]+)", tokensGrab)
+grabTokens = requests.get(URL[0])
+grabTokens = str(grabTokens.content)
+tokenList = re.findall(r"\\n([A-Z a-z]+-[0-9]+)", grabTokens)
 
 token = random.choice(tokenList)
 pyperclip.copy(token)
